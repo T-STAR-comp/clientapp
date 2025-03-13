@@ -6,7 +6,7 @@ import EventDisp from '../event pages/eventDisp.jsx';
 import TransDisp from '../event pages/eventTransaction.jsx';
 import errorIcon from '../assets/icons/error_.svg';
 import close from '../assets/icons/close_FILL0_wght400_GRAD0_opsz24.svg';
-import { json, Link, Outlet } from 'react-router-dom';
+import {Link, Outlet } from 'react-router-dom';
 import { useState} from 'react';
 
 const LayOut = (props) => {

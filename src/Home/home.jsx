@@ -36,10 +36,6 @@ function Home() {
                 <div className={style.TicketDisplay}>
                     <TicketDisplay/>
                 </div>
-
-                <div className={style.footer}>
-                &copy; 2024 Ticket Malawi | <a href="/bluegalaxy" target="_blank">ticketstar/malawi.oasis.co</a>
-                </div>
                 
             </div>
     )
