@@ -4,6 +4,7 @@ import {Link, Outlet} from 'react-router-dom'
 import image1 from '../assets/1693330525825_test.png'
 import close from '../assets/icons/close_FILL0_wght400_GRAD0_opsz24.svg'
 function  About(){
+    const currentYear = new Date().getFullYear();
     return(
         <div className={style.about_cont}>
             <Link to="/"><img onClick={close} className={style.closeBtn} src={close} alt="close icon" width='30px' height='30px' /></Link>
@@ -59,7 +60,7 @@ function  About(){
             </div>
             <hr/>
             <div className={style.footer}>
-                &copy; 2024 Ticket Malawi | <a href="/bluegalaxy" target="_blank">ticketstar/malawi.oasis.co</a>
+            &copy; {currentYear} Ticket Malawi | <a href='/bluegalaxy' target="_blank" rel="noopener noreferrer">ticketmalawi/oasis.co</a>
                 </div>
         </div>
     )

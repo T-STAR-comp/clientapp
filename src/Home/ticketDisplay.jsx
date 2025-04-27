@@ -56,8 +56,10 @@ function TicketDisplay(){
     }
     
     return(
-        <><div className={style.main_container} >
-            {Events.map((Event)=> (
+        <>
+        
+        <div className={style.main_container} >
+            {Events ? Events.map((Event)=> (
                 <TicketCont
                 view={Event.Status === 0 ? 'none': null}
                 image={Event.ImageURL}
@@ -65,7 +67,7 @@ function TicketDisplay(){
                 name={Event.EventName}
                 button={<Link to={Event.EventURL}><button className={style.buy_btn}>Buy Tickets</button></Link>}
                  />
-            ))}
+            )) : "NO Events Available"}
             </div>
         </>
     )

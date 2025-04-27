@@ -1,6 +1,7 @@
 import style from './styles/eventDisp.module.css'
 
 function EventDisp(props) {
+    const currentYear = new Date().getFullYear();
     return (
         <div className={style.main_cont}>
             <div className={style.discription_cont}>
@@ -66,7 +67,7 @@ function EventDisp(props) {
             </div>
 
             <div className={style.footer}>
-                &copy; 2024 Ticket Malawi | <a href="/bluegalaxy" target="_blank">ticketstar/malawi.webstar.co</a>
+            &copy; {currentYear} Ticket Malawi | <a href='/bluegalaxy' target="_blank" rel="noopener noreferrer">ticketmalawi/oasis.co</a>
             </div>
         </div>
     );
