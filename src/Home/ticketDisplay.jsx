@@ -67,7 +67,7 @@ function TicketDisplay(){
                 name={Event.EventName}
                 button={<Link to={Event.EventURL}><button className={style.buy_btn}>Buy Tickets</button></Link>}
                  />
-            )) : "NO Events Available"}
+            )) : <p>No Events Available</p>}
             </div>
         </>
     )

@@ -16,7 +16,7 @@ import BlueGalaxy from './special/special.jsx'
 function App() {
 
   const[Events, SetEvents] = useState([]);
-  const[landing, Setlanding] = useState(null);
+  const[landing, Setlanding] = useState(false);
   const[Connection, SetConnection] = useState(null);
   const[Loading, SetLoading] = useState(true);
 
@@ -24,6 +24,7 @@ function App() {
     try{
       const res = await fetch(import.meta.env.VITE_getlandingstateURL);
       const data = await res.json();
+      console.log(data)
       if(data === 0){
         Setlanding(false);
       }
@@ -75,17 +76,16 @@ function App() {
   if(Connection === false) {
     return(
       <>
-        <MaintanancePage msg= "Server Connection Failed"/>
+        <LandingPage/>
+        {/*<MaintanancePage msg= "Server Connection Failed"/>*/}
       </>
     );
   };
 
   return (
     <>
-      {landing === true? 
-      
-      <LandingPage/>
-      :
+      {landing === false? 
+
       <Routes>
         {/*permanent pages*/}
         <Route path='*' element={<NotFound/>} />
@@ -110,7 +110,10 @@ function App() {
             />
           ))
         }
-      </Routes>}
+      </Routes>
+      :
+      <LandingPage/>
+      }
     </>
   )
 }
