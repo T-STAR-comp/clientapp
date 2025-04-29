@@ -50,8 +50,8 @@ const LayOut = (props) => {
             email: email,
             first_name: FirstName,
             last_name: LastName,
-            callback_url: `${import.meta.env.VITE_homeURL}/ticketmalawi/getticket/page`,
-            return_url: `${import.meta.env.VITE_homeURL}/PaymentError/ticketmalawi`,
+            callback_url: import.meta.env.VITE_callback_url,
+            return_url: import.meta.env.VITE_return_url,
             tx_ref: Math.floor(Math.random() * 1000000000) + 1,
             customization: {
                 title: EventInfo.EventName,
